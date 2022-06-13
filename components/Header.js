@@ -4,7 +4,7 @@ export default function Headers() {
   return (
     <>
       <div className={styles.Header}>
-        <h1>Working on it!</h1>
+        <h1>Structure Defined</h1>
       </div>
     </>
   );
