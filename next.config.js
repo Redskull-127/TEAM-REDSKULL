@@ -6,7 +6,7 @@ const nextConfig = {
     path: ""
   },
   basePath: "/TEAM-REDSKULL",
-  assetPrefix: "/TEAM-REDSKULL",
+  assetPrefix: "https://meertarbani.dev/TEAM-REDSKULL/",
 }
 
 module.exports = nextConfig
