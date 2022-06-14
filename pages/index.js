@@ -15,6 +15,7 @@ export default function Home() {
     appId: "1:727979282334:web:1e2bbfed7c0a44b269d08f",
     measurementId: "G-C4T38F9X70",
   });
+  
   return (
     <>
       <Header />
