@@ -1,8 +1,94 @@
-.Header {
-    text-align: center;
-    top: 50%;
+.HeaderTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin: 0em 3em 0em 3em;
+    background-color: #fff;
+    border-bottom: 3px solid #75A4FF;
+    border-left: 3px solid #75A4FF;
+    border-right: 3px solid #75A4FF;
+    border-radius: 0px 0px 7px 7px;
 }
 
-.Header h1{
-    color: black;
+.HeaderTop img{
+    margin: 15px;
+}
+
+.HeaderTop .divlogin{
+    background-color: #75A4FF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 47px;
+    width: 150px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.HeaderTop .divlogin a{
+    color: aliceblue;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+}
+
+.details {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logindiv{
+    margin-top: 70px;
+    height: 400px;
+    width: 664px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top: 3px solid #75A4FF;
+    border-bottom: 3px solid #75A4FF;
+    border-left: 3px solid #75A4FF;
+    border-right: 3px solid #75A4FF;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.logindiv .upper{
+    margin: 15px 0px 0px 15px;
+    width: 100%;
+    height: fit-content;
+    text-align: start;
+}
+
+.logindiv .upper i{
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logindiv .middle {
+    margin: 15px 0px 0px 15px;
+    width: 100%;
+    height: fit-content;
+    text-align: start;
+}
+
+.logindiv .lower .divlogin{
+    background-color: #75A4FF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 47px;
+    width: 150px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.logindiv .lower .divlogin a{
+    color: aliceblue;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
 }
