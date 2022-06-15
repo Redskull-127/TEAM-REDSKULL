@@ -43,7 +43,7 @@ export default function HomeScreen() {
                     <img src="https://i.ibb.co/Z1SGTcZ/Vector.png"/>
                     <h1>Create New Record</h1>
                 </div>
-                <div className={styles.box}>
+                <div className={styles.box} onClick={(e) => {window.open('./FindScreen', '_self')}}>
                     <img src="https://i.ibb.co/jrn41HP/Group-2-1.png"/>
                     <h1>Find A Record</h1>
                 </div>
