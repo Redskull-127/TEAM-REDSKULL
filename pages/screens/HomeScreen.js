@@ -19,8 +19,8 @@ export default function HomeScreen() {
             <div className={styles.NavBar}>
                 <img src="https://i.ibb.co/xCXrwbW/CY-Bock.png" />
                 <div className={styles.options}>
-                    <a href="/">Home</a>
-                    <a href="/">About Us</a>
+                    <a >Home</a>
+                    <a >About Us</a>
                     <a
                         id="username"
                         onClick={(e) => {
