@@ -39,7 +39,7 @@ export default function HomeScreen() {
             </div>
             <center>
             <div className={styles.body}>
-                <div className={styles.box}>
+                <div className={styles.box} onClick={(e) => {window.open('./CreateScreen', '_self')}}>
                     <img src="https://i.ibb.co/Z1SGTcZ/Vector.png"/>
                     <h1>Create New Record</h1>
                 </div>
