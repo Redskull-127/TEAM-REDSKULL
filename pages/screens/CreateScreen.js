@@ -7,6 +7,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState, useEffect } from "react";
 export default function CreateScreen() {
+  const [success, setSuccess] = useState(false);
   const [name, setName] = useState("");
   const [crime, setCrime] = useState("");
   const [age, setAge] = useState(0);
@@ -35,10 +36,12 @@ export default function CreateScreen() {
     } catch (e) {
       console.error("Error adding document: ", e);
     }
+    setSuccess(true);
   }
 
   return (
     <>
+    {success ? <div className="alert alert-success">Successfully added</div> : <div className="alert alert-danger">An Error Occured </div>}
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
@@ -80,14 +83,14 @@ export default function CreateScreen() {
             <label htmlFor="cname" className="form-label">
               Name
             </label>
-            <input type="text" className="form-control" id="cname" selected={name} onChange={(e) => setName(e)} />
+            <input type="text" className="form-control" id="cname" onChange={(e) => setName(e.currentTarget.value)} />
           </div>
 
           <div className="mb-3">
             <label htmlFor="ccrime" className="form-label">
               Crime
             </label>
-            <input type="text" className="form-control" id="ccrime" selected={crime} onChange={(e) => setCrime(e)}/>
+            <input type="text" className="form-control" id="ccrime" onChange={(e) => setCrime(e.currentTarget.value)}/>
           </div>
 
           <div className={styles.combain}>
@@ -95,13 +98,13 @@ export default function CreateScreen() {
               <label htmlFor="cage" className="form-label">
                 Age
               </label>
-              <input type="number" className="form-control" id="cage" selected={age} onChange={(e) => age(e)}/>
+              <input type="text" className="form-control" id="cage" onChange={(e) => setAge(e.currentTarget.value)}/>
             </div>
             <div className="mb-3">
               <label htmlFor="cgender" className="form-label">
                 Gender
               </label>
-              <input type="text" className="form-control" id="cgender" selected={gender} onChange={(e) => setGender(e)}/>
+              <input type="text" className="form-control" id="cgender" onChange={(e) => setGender(e.currentTarget.value)}/>
             </div>
           </div>
 
@@ -127,7 +130,7 @@ export default function CreateScreen() {
               type="text"
               className="form-control"
               id="cloc"
-              selected={location} onChange={(e) => setLocation(e)}
+              onChange={(e) => setLocation(e.currentTarget.value)}
               style={{ width: "500px" }}
             />
           </div>
@@ -140,7 +143,7 @@ export default function CreateScreen() {
               type="text"
               className="form-control"
               id="cloccaught"
-              selected={caughtlocation} onChange={(e) => setCaughtlocation(e)}
+              onChange={(e) => setCaughtlocation(e.currentTarget.value)}
               style={{ width: "500px" }}
             />
           </div>
@@ -153,18 +156,19 @@ export default function CreateScreen() {
               type="text"
               className="form-control"
               id="cdetails"
-              selected={otherData} onChange={(e) => setOtherData(e)}
+              onChange={(e) => setOtherData(e.currentTarget.value)}
               style={{ width: "500px" }}
             />
           </div>
           <div>
             <p>Photo/Video of criminal</p>
-            <button type="button" className="btn btn-primary" onClick={(e) => {console.log(dateofCrime)}}>
+            <button type="button" className="btn btn-primary" onClick={()=>sendData()}>
               Upload
             </button>
           </div>
         </div>
       </center>
+      
     </>
   );
 }

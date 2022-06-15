@@ -32,3 +32,8 @@
 .body .combain input{
     width: 50%;
 }
+
+.alert{
+    position: fixed;
+    top: 0;
+}
