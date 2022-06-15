@@ -3,25 +3,36 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { auth } from "../firebase/FirebaseConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import HomeScreen from "../pages/screens/HomeScreen";
+import Link from 'next/link';
+
 
 export default function Headers() {
   const [isOpen, setIsOpen] = useState(false);
   const [isemail, setEmail] = useState("");
   const [ispassword, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState(false);
   const [isLogedIn, setIsLoggedIn] = useState(false);
+  if(isLogedIn){
+    window.open("/screens/HomeScreen", "_self");
+  }
+  const handleChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handlepass = (event) => {
+    setPassword(event.target.value);
+  };
 
   function log() {
-    setEmail(document.getElementById("exampleFormControlInput1").value);
-    setPassword(document.getElementById("exampleFormControlInput2").value);
     signInWithEmailAndPassword(auth, isemail, ispassword)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
         setIsLoggedIn(true);
-        window.open("/", "_self");
       })
       .catch((error) => {
+        setError(true);
         setError(error.message);
         setIsLoggedIn(false);
       });
@@ -36,7 +47,7 @@ export default function Headers() {
     return (
       <>
         <div className={styles.HeaderTop}>
-          <img src="/Assets/CY-Bock.png" />
+          <img src="https://i.ibb.co/xCXrwbW/CY-Bock.png" />
           <div
             className={styles.divlogin}
             onClick={(e) => {
@@ -68,6 +79,8 @@ export default function Headers() {
                   <input
                     type="email"
                     className="form-control"
+                    onChange={handleChange}
+                    value={isemail}
                     id="exampleFormControlInput1"
                     placeholder="name@example.com"
                   />
@@ -80,7 +93,9 @@ export default function Headers() {
                     Password
                   </label>
                   <input
-                    type="email"
+                    onChange={handlepass}
+                    value={ispassword}
+                    type="password"
                     className="form-control"
                     id="exampleFormControlInput2"
                     placeholder="********"
@@ -103,7 +118,8 @@ export default function Headers() {
           <div className={styles.details} id="details">
             <h1>Some Details Here Later</h1>
           </div>
-        )}
+        )
+        }
       </>
     );
   }

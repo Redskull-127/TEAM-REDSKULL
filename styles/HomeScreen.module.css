@@ -1,0 +1,63 @@
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin: 0em 3em 0em 3em;
+    background-color: #fff;
+    border-bottom: 3px solid #75A4FF;
+    border-left: 3px solid #75A4FF;
+    border-right: 3px solid #75A4FF;
+    border-radius: 0px 0px 7px 7px;
+}
+
+.NavBar img{
+    margin: 15px;
+}
+
+.NavBar .options a{
+    margin: 0px 20px 0px 20px;
+    color: black;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+}
+
+.NavBar .options .user{
+    background-color: #75A4FF;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 47px;
+    width: 150px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.body {
+    height: 250px;
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.body .box{
+    cursor: pointer;
+    display: block;
+    border: 3px #75A4FF solid;
+    padding: 15px;
+    border-radius: 14px;
+    height: 85%;
+    width: 300px;
+    transition: 0.7s;
+}
+
+.body .box:hover{
+    background-color: #75A4FF;
+}
+
+.body .box img{
+    margin-top: 20px;
+    height: 50px;
+}
