@@ -14,7 +14,7 @@ export default function Headers() {
   const [error, setError] = useState(false);
   const [isLogedIn, setIsLoggedIn] = useState(false);
   if(isLogedIn){
-    window.open("/TEAM-REDSKULL/screens/HomeScreen", "_self");
+    window.open("/screens/HomeScreen", "_self");
   }
   const handleChange = (event) => {
     setEmail(event.target.value);
