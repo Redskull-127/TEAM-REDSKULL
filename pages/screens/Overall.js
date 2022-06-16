@@ -76,7 +76,7 @@ export default function Overall() {
         crossOrigin="anonymous"
       ></Script>
       <Head>
-        <title>CY-BOCK</title>
+        <title>CY-BOCK | Overall</title>
         <meta name="description" content="Criminal Data Analyist" />
         <link rel="icon" href="/favicon.ico" />
         <link

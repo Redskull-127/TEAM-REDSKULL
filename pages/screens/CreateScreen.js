@@ -50,7 +50,7 @@ export default function CreateScreen() {
         crossOrigin="anonymous"
       ></Script>
       <Head>
-        <title>CY-BOCK</title>
+        <title>CY-BOCK | Create</title>
         <meta name="description" content="Criminal Data Analyist" />
         <link rel="icon" href="/favicon.ico" />
         <link

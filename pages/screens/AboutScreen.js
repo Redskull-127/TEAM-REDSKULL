@@ -10,7 +10,7 @@ export default function AboutScreen() {
         crossOrigin="anonymous"
       ></Script>
       <Head>
-        <title>CY-BOCK</title>
+        <title>CY-BOCK | About</title>
         <meta name="description" content="Criminal Data Analyist" />
         <link rel="icon" href="/favicon.ico" />
         <link

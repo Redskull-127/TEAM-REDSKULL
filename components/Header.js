@@ -1,6 +1,6 @@
 import styles from "../styles/Header.module.css";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { auth } from "../firebase/FirebaseConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import HomeScreen from "../pages/screens/HomeScreen";
@@ -13,6 +13,11 @@ export default function Headers() {
   const [ispassword, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [isLogedIn, setIsLoggedIn] = useState(false);
+
+
+  
+  
+
   if (isLogedIn) {
     window.open("/screens/HomeScreen", "_self");
   }
