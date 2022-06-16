@@ -1,6 +1,8 @@
 import styles from "../../styles/HomeScreen.module.css";
 import { auth } from "../../firebase/FirebaseConfig";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+
 
 export default function HomeScreen() {
     const [bgCol, setbgCol] = useState("#75A4FF");
@@ -20,7 +22,9 @@ export default function HomeScreen() {
             <div className={styles.NavBar}>
                 <img src="https://i.ibb.co/xCXrwbW/CY-Bock.png" />
                 <div className={styles.options}>
-                    <a >Home</a>
+                    <Link href='/'>
+                    <a>Home</a>
+                    </Link>
                     <a >About Us</a>
                     <a
                         id="username"

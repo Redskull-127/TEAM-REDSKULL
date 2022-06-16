@@ -34,11 +34,15 @@
 }
 
 .details {
-    margin-top: 20%;
-    display: flex;
+    margin-top: 10%;
+    display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.details img{
+    height: 250px;
 }
 
 .logindiv{

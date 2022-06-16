@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import { auth } from "../firebase/FirebaseConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import HomeScreen from "../pages/screens/HomeScreen";
-import Link from 'next/link';
-
+import Link from "next/link";
+import Draggable, { DraggableCore } from "react-draggable";
 
 export default function Headers() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ export default function Headers() {
   const [ispassword, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [isLogedIn, setIsLoggedIn] = useState(false);
-  if(isLogedIn){
+  if (isLogedIn) {
     window.open("/screens/HomeScreen", "_self");
   }
   const handleChange = (event) => {
@@ -116,10 +116,30 @@ export default function Headers() {
           </center>
         ) : (
           <div className={styles.details} id="details">
-            <h1>Some Details Here Later</h1>
+            <h1>Developed by TEAM REDSKULL</h1>
+            <Draggable
+              onStart={(e) => {
+                const info = document.getElementById("infop");
+                info.style.display = "none";
+              }}
+              onStop={(e) => {
+                const info = document.getElementById("infop");
+                info.style.display = "block";
+              }}
+              axis="x"
+              handle=".handle"
+              defaultPosition={{ x: 0, y: 0 }}
+              position={null}
+              grid={[25, 25]}
+              scale={1}
+            >
+              <div className="handle">
+                <img src="/Assets/computer.png" title="security is key for privacy"/>
+              </div>
+            </Draggable>
+            <p id="infop" style={{marginTop: '50px'}}>Upper image is dragable</p>
           </div>
-        )
-        }
+        )}
       </>
     );
   }
