@@ -15,7 +15,7 @@ export default function Home() {
     appId: "1:727979282334:web:1e2bbfed7c0a44b269d08f",
     measurementId: "G-C4T38F9X70",
   });
-  
+
   return (
     <>
       <Header />
@@ -38,10 +38,13 @@ export default function Home() {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link
-            href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
             rel="stylesheet"
           />
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+          />
           {/* font-family: 'Oswald', sans-serif; */}
         </Head>
       </div>

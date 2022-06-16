@@ -88,7 +88,7 @@ export default function Overall() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
           rel="stylesheet"
         />
         <link
