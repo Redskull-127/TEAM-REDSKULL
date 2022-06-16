@@ -30,7 +30,7 @@ export default function HomeScreen() {
       <Head>
         <title>CY-BOCK | Home</title>
         <meta name="description" content="Criminal Data Analyist" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/ficon.ico" />
       </Head>
       {loading ? (
         <>
