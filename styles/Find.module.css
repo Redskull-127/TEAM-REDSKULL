@@ -30,7 +30,23 @@
 }
 
 .Container .Card .CardBody3{
-    width:20%;
+    width:7%;
+}
+
+.Container .Card .CardBody4{
+    width: 20%;
+}
+
+.Container .Card .CardBody5{
+    width: 20%;
+}
+
+.Contianer .Card .CardBody6{
+    width: 20%;
+}
+
+.Container .Card .CardBody7{
+    width: 5%;
 }
 
 .Container .heads{

@@ -3,6 +3,7 @@ import { auth } from "../../firebase/FirebaseConfig";
 import React, { useState, useEffect } from "react";
 
 export default function HomeScreen() {
+    const [bgCol, setbgCol] = useState("#75A4FF");
     function details() {
         const username = document.getElementById("username");
         if (auth.currentUser) {
@@ -27,9 +28,12 @@ export default function HomeScreen() {
                             auth.signOut;
                             window.open("/", "_self");
                         }}
+                        title="Logout"
+                        onMouseEnter={(e) => {setbgCol("red")}}
+                        onMouseLeave={(e) => {setbgCol("#75A4FF")}}
                         style={{
                             color: "white",
-                            backgroundColor: "#75A4FF",
+                            backgroundColor: bgCol,
                             padding: "10px",
                             borderRadius: "14px",
                             cursor: "pointer",

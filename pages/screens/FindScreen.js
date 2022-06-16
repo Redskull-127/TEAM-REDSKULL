@@ -68,7 +68,11 @@ export default function FindScreen() {
         <div className={styles.heads}>
           <h3 style={{width: "15%"}}>Name</h3>
           <h3 style={{width: "5%"}}>Age</h3>
+          <h3 style={{width: "7%"}}>Gender</h3>
           <h3 style={{width: "20%"}}>Crime</h3>
+          <h3 style={{width: "20%"}} title="Location where caught">LWC</h3>
+          <h3 style={{width: "20%"}} title="Location of Police station">LPC</h3>
+          <h3 style={{width: "5%"}}>TotalCases</h3>
         </div>
         {docs && docs.map((doc, key, key2, key3) => {
           return(
@@ -79,8 +83,20 @@ export default function FindScreen() {
               <div key={key2} className={styles.CardBody2}>
                 <h4>{doc.age}</h4>
               </div>
-              <div key={key3} className={styles.CardBody3}>
+              <div key={key2} className={styles.CardBody3}>
+                <h4>{doc.gender}</h4>
+              </div>
+              <div key={key3} className={styles.CardBody4}>
                 <h4>{doc.crime}</h4>
+              </div>
+              <div key={key3} className={styles.CardBody5}>
+                <h4>{doc.locationcaught}</h4>
+              </div>
+              <div key={key3} className={styles.CardBody6}>
+                <h4>{doc.location}</h4>
+              </div>
+              <div key={key2} className={styles.CardBody7}>
+                <h4>{doc.totalcases}</h4>
               </div>
             </div>
           )
