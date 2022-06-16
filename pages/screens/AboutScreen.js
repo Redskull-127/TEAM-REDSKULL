@@ -47,7 +47,7 @@ export default function AboutScreen() {
             <p className="card-text">
               Work : Lead, Coding and Hosting
             </p>
-            <Link href='https://redskull.me' target='_blank'>
+            <Link href='https://meertarbani.dev' target='_blank'>
             <a className="btn btn-primary">
               Portfolio
             </a>
