@@ -37,6 +37,7 @@ export default function HomeScreen() {
                             padding: "10px",
                             borderRadius: "14px",
                             cursor: "pointer",
+                            transition: "0.7s"
                         }}
                     ></a>
                 </div>
@@ -51,7 +52,7 @@ export default function HomeScreen() {
                     <img src="https://i.ibb.co/jrn41HP/Group-2-1.png"/>
                     <h1>Find A Record</h1>
                 </div>
-                <div className={styles.box}>
+                <div className={styles.box} onClick={(e) => {window.open('./Overall', '_self')}}>
                     <img src='https://i.ibb.co/dg1TQDH/Vector-1.png'/>
                     <h1>Overall Analysis</h1>
                 </div>
