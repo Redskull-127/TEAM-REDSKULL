@@ -1,6 +1,8 @@
 import styles from "../../styles/AboutScreen.module.css";
 import Head from "next/head";
 import Script from "next/script";
+import Link from "next/link";
+
 export default function AboutScreen() {
   return (
     <>
@@ -45,9 +47,11 @@ export default function AboutScreen() {
             <p className="card-text">
               Work : Lead, Coding and Hosting
             </p>
-            <a href="https://meertarbani.dev" target='_blank' className="btn btn-primary">
+            <Link href='https://redskull.me' target='_blank'>
+            <a className="btn btn-primary">
               Portfolio
             </a>
+            </Link>
           </div>
         </div>
 
@@ -58,9 +62,11 @@ export default function AboutScreen() {
             <p className="card-text">
               work : Ui/Ux designer
             </p>
-            <a href="https://vikas.redskull.me" target='_blank' className="btn btn-primary">
+            <Link href='https://vikas.redskull.me' target='_blank'>
+            <a className="btn btn-primary">
               Portfolio
             </a>
+            </Link>
           </div>
         </div>
 
@@ -71,9 +77,11 @@ export default function AboutScreen() {
             <p className="card-text">
                 work : Ideas
             </p>
-            <a href="https://chirag.redskull.me" target='_blank' className="btn btn-primary">
+            <Link href='https://chirag.redskull.me' target='_blank'>
+            <a className="btn btn-primary">
               Portfolio
             </a>
+            </Link>
           </div>
         </div>
       </div>
