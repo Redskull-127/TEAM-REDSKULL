@@ -70,16 +70,16 @@ export default function FindScreen() {
           <h3 style={{width: "5%"}}>Age</h3>
           <h3 style={{width: "20%"}}>Crime</h3>
         </div>
-        {docs && docs.map((doc, key) => {
+        {docs && docs.map((doc, key, key2, key3) => {
           return(
-            <div className={styles.Card}>
+            <div key={key} className={styles.Card}>
               <div className={styles.CardBody1}>
                 <h4>{doc.name}</h4>
               </div>
-              <div className={styles.CardBody2}>
+              <div key={key2} className={styles.CardBody2}>
                 <h4>{doc.age}</h4>
               </div>
-              <div className={styles.CardBody3}>
+              <div key={key3} className={styles.CardBody3}>
                 <h4>{doc.crime}</h4>
               </div>
             </div>
