@@ -60,7 +60,7 @@ export default function AboutScreen() {
           <div className="card-body">
             <h5 className="card-title">Vikas Assudani</h5>
             <p className="card-text">
-              work : Ui/Ux designer
+              Work : Ui/Ux designer
             </p>
             <Link href='https://vikas.redskull.me' target='_blank'>
             <a className="btn btn-primary">
@@ -75,7 +75,7 @@ export default function AboutScreen() {
           <div className="card-body">
             <h5 className="card-title">Chirag Pariyani</h5>
             <p className="card-text">
-                work : Ideas
+                Work : Ideas
             </p>
             <Link href='https://chirag.redskull.me' target='_blank'>
             <a className="btn btn-primary">
