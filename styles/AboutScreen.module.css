@@ -1,0 +1,21 @@
+.head{
+    margin-top: 7%;
+}
+
+.bi{
+    cursor: pointer;
+    top: 2%;
+    left: 2%;
+    position: absolute;
+}
+
+.head h1{
+    text-align: center;
+}
+
+.cards{
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

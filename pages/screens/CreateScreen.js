@@ -43,7 +43,7 @@ export default function CreateScreen() {
 
   return (
     <>
-    {success ? <div className="alert alert-success">Successfully added</div> : <div className="alert alert-danger">An Error Occured </div>}
+    {success ? <div className="alert alert-success">Successfully added</div> : null}
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"

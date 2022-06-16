@@ -25,7 +25,9 @@ export default function HomeScreen() {
                     <Link href='/'>
                     <a>Home</a>
                     </Link>
+                    <Link href='./AboutScreen'>
                     <a >About Us</a>
+                    </Link>
                     <a
                         id="username"
                         onClick={(e) => {
