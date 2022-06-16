@@ -17,6 +17,7 @@ export default function CreateScreen() {
   const [location, setLocation] = useState("");
   const [caughtlocation, setCaughtlocation] = useState("");
   const [otherData, setOtherData] = useState("");
+  const [precases, setPrecases] = useState(0);
   const [docs, setDocs] = useState(" ");
   function sendData() {
     try {
@@ -30,6 +31,7 @@ export default function CreateScreen() {
         location: location,
         locationcaught: caughtlocation,
         otherdata: otherData,
+        totalcases: precases + 1,
         document: docs,
       });
       console.log("Document written with ID: ", docRef.id);
@@ -145,6 +147,18 @@ export default function CreateScreen() {
               id="cloccaught"
               onChange={(e) => setCaughtlocation(e.currentTarget.value)}
               style={{ width: "500px" }}
+            />
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="cprecase" className="form-label">
+              Total Previous Cases
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="cprecase"
+              onChange={(e) => setPrecases(e.currentTarget.value)}
             />
           </div>
 

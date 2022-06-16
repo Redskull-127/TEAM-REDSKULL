@@ -1,0 +1,40 @@
+.Heading{
+    text-align: center;
+    margin: 50px;
+}
+
+.bi{
+    cursor: pointer;
+    left: 2%;
+    position: absolute;
+}
+
+.Container{
+    padding: 10px;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.Container .Card{
+    display: flex;
+    margin: 10px;
+    /* position: relative; */
+}
+
+.Container .Card .CardBody1{
+    width:15%
+}
+
+.Container .Card .CardBody2{
+    width:5%;
+}
+
+.Container .Card .CardBody3{
+    width:20%;
+}
+
+.Container .heads{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+}
