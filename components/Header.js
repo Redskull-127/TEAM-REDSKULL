@@ -64,6 +64,8 @@ export default function Headers() {
         </div>
         {isOpen ? (
           <center>
+            <img className={styles.vector} src='/Vector/Vector.png'/>
+            <img className={styles.vector2} src='/Vector/Vectorinverted.png'/>
             <div className={styles.logindiv} id="logindiv">
               <div className={styles.upper}>
                 <i

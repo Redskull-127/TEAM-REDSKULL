@@ -1,72 +1,97 @@
 .NavBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    margin: 0em 3em 0em 3em;
-    background-color: #fff;
-    border-bottom: 3px solid #75A4FF;
-    border-left: 3px solid #75A4FF;
-    border-right: 3px solid #75A4FF;
-    border-radius: 0px 0px 7px 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0em 3em 0em 3em;
+  background-color: #fff;
+  border-bottom: 3px solid #75a4ff;
+  border-left: 3px solid #75a4ff;
+  border-right: 3px solid #75a4ff;
+  border-radius: 0px 0px 7px 7px;
 }
 
-.NavBar img{
-    margin: 15px;
+.vector {
+  transform: translateX(-150px);
+  animation: slidein 1.5s forwards;
+  position: absolute;
+  z-index: -1;
+  height: 250px;
 }
 
-.NavBar .options a{
-    margin: 0px 20px 0px 20px;
-    padding: 10px;
-    color: black;
-    font-size: 1.2rem;
-    letter-spacing: 0.1em;
-    transition: 0.7s;
-    border-radius: 14px;
+@keyframes slidein {
+  100% {
+    transform: translateX(0px);
+  }
 }
 
-.NavBar .options a:hover{
-    background-color: #75A4FF;
+.vector2 {
+  transform: translateX(50px);
+  animation: slidein 1.5s forwards;
+  height: 150px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
-.NavBar .options .user{
-    background-color: #75A4FF;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 47px;
-    width: 150px;
-    border-radius: 7px;
-    cursor: pointer;
+.NavBar img {
+  margin: 15px;
+}
+
+.NavBar .options a {
+  margin: 0px 20px 0px 20px;
+  padding: 10px;
+  color: black;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  transition: 0.7s;
+  border-radius: 14px;
+}
+
+.NavBar .options a:hover {
+  background-color: #75a4ff;
+}
+
+.NavBar .options .user {
+  background-color: #75a4ff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 47px;
+  width: 150px;
+  border-radius: 7px;
+  cursor: pointer;
 }
 
 .body {
-    height: 250px;
-    margin-top: 180px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  height: 250px;
+  margin-top: 180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.body .box{
-    cursor: pointer;
-    display: block;
-    border: 3px #75A4FF solid;
-    padding: 15px;
-    border-radius: 14px;
-    height: 85%;
-    width: 300px;
-    transition: 0.7s;
+.body .box {
+  background-color: white;
+  cursor: pointer;
+  display: block;
+  border: 3px #75a4ff solid;
+  padding: 15px;
+  border-radius: 14px;
+  height: 85%;
+  width: 300px;
+  transition: 0.7s;
 }
 
-.body .box:hover{
-    transform: scale(1.05);
-    box-shadow: 5px 10px 10px #3b7cff;
-    background-color: #75A4FF;
+.body .box:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 10px 10px #3b7cff;
+  background-color: #75a4ff;
 }
 
-.body .box img{
-    margin-top: 20px;
-    height: 50px;
+.body .box img {
+  margin-top: 20px;
+  height: 50px;
 }

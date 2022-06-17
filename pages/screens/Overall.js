@@ -13,6 +13,9 @@ import {
 } from "firebase/firestore";
 import Head from "next/head";
 import Script from "next/script";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 
 export default function Overall() {
   const [names, setNames] = useState([]);
@@ -64,6 +67,7 @@ export default function Overall() {
   };
 
   useEffect(() => {
+    Aos.init({ duration: 2000 });
     setTimeout(() => {
       unsubscribe();
     }, 2000);
@@ -107,7 +111,7 @@ export default function Overall() {
         <h1>Overall Crime-Rate</h1>
         <iframe width="900" height="500" frameBorder="0" scrolling="no" src="//plotly.com/~meertarbani/12.embed"></iframe>
       </div>
-      <div className={styles.headings}>
+      <div data-aos="fade-up" className={styles.headings}>
         <h1>Political Motives</h1>
         <iframe
           width="900"
@@ -117,7 +121,7 @@ export default function Overall() {
           src="//plotly.com/~meertarbani/10.embed"
         ></iframe>
       </div>
-      <div className={styles.headings}>
+      <div data-aos="fade-up" className={styles.headings}>
         <h1>Sexual Attack Attemps</h1>
         <iframe
           width="900"
@@ -127,7 +131,7 @@ export default function Overall() {
           src="//plotly.com/~meertarbani/8.embed"
         ></iframe>
       </div>
-      <div className={styles.headings}>
+      <div data-aos="fade-up" className={styles.headings}>
         <h1>Fraud Data</h1>
         <iframe
           width="900"
@@ -137,7 +141,7 @@ export default function Overall() {
           src="//plotly.com/~meertarbani/6.embed"
         ></iframe>
       </div>
-      <div className={styles.headings}>
+      <div data-aos="fade-up" className={styles.headings}>
         <h1>Anger Data</h1>
         <iframe
           width="900"
@@ -147,7 +151,7 @@ export default function Overall() {
           src="//plotly.com/~meertarbani/3.embed"
         ></iframe>
       </div>
-      <div className={styles.headings}>
+      <div data-aos="fade-up" className={styles.headings}>
         <h1>Personal Revenge Data</h1>
         <iframe
           width="900"

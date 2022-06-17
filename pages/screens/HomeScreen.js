@@ -34,6 +34,8 @@ export default function HomeScreen() {
       </Head>
       {loading ? (
         <>
+          <img className={styles.vector} src='/Vector/Vector.png'/>
+          <img className={styles.vector2} src='/Vector/Vectorinverted.png'/>
           <div className={styles.NavBar}>
             <img src="https://i.ibb.co/xCXrwbW/CY-Bock.png" />
             <div className={styles.options}>
