@@ -105,7 +105,7 @@ export default function Overall() {
       ></h1>
       <div className={styles.headings}>
         <h1>Overall Crime-Rate</h1>
-        <iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~meertarbani/12.embed"></iframe>
+        <iframe width="900" height="500" frameBorder="0" scrolling="no" src="//plotly.com/~meertarbani/12.embed"></iframe>
       </div>
       <div className={styles.headings}>
         <h1>Political Motives</h1>
