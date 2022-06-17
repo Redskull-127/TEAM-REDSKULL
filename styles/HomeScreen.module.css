@@ -17,9 +17,16 @@
 
 .NavBar .options a{
     margin: 0px 20px 0px 20px;
+    padding: 10px;
     color: black;
     font-size: 1.2rem;
     letter-spacing: 0.1em;
+    transition: 0.7s;
+    border-radius: 14px;
+}
+
+.NavBar .options a:hover{
+    background-color: #75A4FF;
 }
 
 .NavBar .options .user{
@@ -54,6 +61,8 @@
 }
 
 .body .box:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 10px 10px #3b7cff;
     background-color: #75A4FF;
 }
 

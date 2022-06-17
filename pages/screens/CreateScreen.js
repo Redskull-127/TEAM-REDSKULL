@@ -175,7 +175,6 @@ export default function CreateScreen() {
             />
           </div>
           <div>
-            <p>Photo/Video of criminal</p>
             <button type="button" className="btn btn-primary" onClick={()=>sendData()}>
               Upload
             </button>
