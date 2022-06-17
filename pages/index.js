@@ -3,10 +3,8 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Script from "next/script";
 import { initializeApp } from "firebase/app";
-
+import { useEffect } from "react";
 export default function Home() {
-
-
   initializeApp({
     apiKey: "AIzaSyCh8nd7w9QbWD9z-BL5-Z3-kV_HoNgR--E",
     authDomain: "team-redskull.firebaseapp.com",
@@ -16,9 +14,30 @@ export default function Home() {
     appId: "1:727979282334:web:1e2bbfed7c0a44b269d08f",
     measurementId: "G-C4T38F9X70",
   });
+  useEffect(() => {
+    var addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
+  }, []);
+  const googleTranslateElementInit = () => {
 
+    new window.google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages : "en,hi", // include this for selected languages
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element');
+
+}
   return (
     <>
+    <center>
+    <div id="google_translate_element" style={{position: 'absolute'}}> </div>
+    </center>
       <Header />
       <div className={styles.container}>
         <Script

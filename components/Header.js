@@ -6,6 +6,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import HomeScreen from "../pages/screens/HomeScreen";
 import Link from "next/link";
 import Draggable, { DraggableCore } from "react-draggable";
+import { useRouter } from "next/router";
 
 export default function Headers() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +14,6 @@ export default function Headers() {
   const [ispassword, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [isLogedIn, setIsLoggedIn] = useState(false);
-
-
   
   
 
