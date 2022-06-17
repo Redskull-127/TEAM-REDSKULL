@@ -21,6 +21,7 @@
 }
 
 .cards .card{
+    width: 18rem;
     transition: 0.7s;
 }
 
@@ -28,4 +29,19 @@
     transform: scale(1.05);
     box-shadow: 5px 10px 10px #3f7efd;
     background-color: #75A4FF;
+}
+
+@media only screen and (max-width: 768px) { 
+    .cards{
+        flex-direction: column;
+        margin-top: 50px;
+
+    }
+
+    .cards .card{
+        margin-bottom: 50px;
+        height: 27rem;
+        width: 16rem
+    }
+
 }

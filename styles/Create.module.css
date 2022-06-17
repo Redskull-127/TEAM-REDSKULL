@@ -37,3 +37,42 @@
     position: fixed;
     top: 0;
 }
+
+.adaptive {
+    width: 500px;
+}
+
+@media only screen and (max-width: 768px) { 
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .header h1{
+        cursor: pointer;
+        font-weight: 700;
+    }
+    
+    .body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+        width: 80%;
+        background-color: #91b4fa;
+        border: 2px solid #75A4FF;
+        border-radius: 14px;
+    }
+    .body .combain input{
+        width: 50%;
+    }
+
+    .adaptive{
+        width: 200px;
+    }
+}

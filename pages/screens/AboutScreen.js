@@ -40,7 +40,7 @@ export default function AboutScreen() {
           ></h1>
       <div className={styles.head}><h1>Meet our Developers</h1></div>
       <div className={styles.cards}>
-        <div className={`card ${styles.card}`} style={{ width: "18rem" }}>
+        <div className={`card ${styles.card}`}>
           <img loading='lazy' src="/Assets/members/Ellipse1.png" className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">Meer Tarbani</h5>
@@ -55,7 +55,7 @@ export default function AboutScreen() {
           </div>
         </div>
 
-        <div className={`card ${styles.card}`} style={{ width: "18rem" }}>
+        <div className={`card ${styles.card}`} >
         <img loading='lazy' src="/Assets/members/Ellipse2.png" className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">Vikas Assudani</h5>
@@ -70,7 +70,7 @@ export default function AboutScreen() {
           </div>
         </div>
 
-        <div className={`card ${styles.card}`} style={{ width: "18rem" }}>
+        <div className={`card ${styles.card}`}>
         <img loading='lazy' src="/Assets/members/Ellipse3.png" className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">Chirag Pariyani</h5>

@@ -130,10 +130,10 @@ export default function CreateScreen() {
             </label>
             <input
               type="text"
-              className="form-control"
+              className={`form-control ${styles.adaptive}`}
               id="cloc"
               onChange={(e) => setLocation(e.currentTarget.value)}
-              style={{ width: "500px" }}
+              // style={{ width: "500px" }}
             />
           </div>
 
@@ -143,10 +143,10 @@ export default function CreateScreen() {
             </label>
             <input
               type="text"
-              className="form-control"
+              className={`form-control ${styles.adaptive}`}
               id="cloccaught"
               onChange={(e) => setCaughtlocation(e.currentTarget.value)}
-              style={{ width: "500px" }}
+              // style={{ width: "500px" }}
             />
           </div>
 
@@ -168,10 +168,10 @@ export default function CreateScreen() {
             </label>
             <input
               type="text"
-              className="form-control"
+              className={`form-control ${styles.adaptive}`}
               id="cdetails"
               onChange={(e) => setOtherData(e.currentTarget.value)}
-              style={{ width: "500px" }}
+              // style={{ width: "500px" }}
             />
           </div>
           <div>
