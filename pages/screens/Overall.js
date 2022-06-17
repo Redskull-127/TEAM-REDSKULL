@@ -18,7 +18,8 @@ export default function Overall() {
   const [names, setNames] = useState([]);
   const [docs, setDocs] = useState([]);
   const [cases, setCases] = useState([]);
-
+  const [labels, seLabels] = useState([]);
+  const [datase, setDatase] = useState([]);
   const q = query(collection(firestore, "Data"));
   const unsubscribe = onSnapshot(q, (querySnapshot) => {
     const cities = [];
@@ -102,9 +103,63 @@ export default function Overall() {
           window.open("./HomeScreen", "_self");
         }}
       ></h1>
+      <div className={styles.headings}>
+        <h1>Overall Crime-Rate</h1>
+        <iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~meertarbani/12.embed"></iframe>
+      </div>
+      <div className={styles.headings}>
+        <h1>Political Motives</h1>
+        <iframe
+          width="900"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+          src="//plotly.com/~meertarbani/10.embed"
+        ></iframe>
+      </div>
+      <div className={styles.headings}>
+        <h1>Sexual Attack Attemps</h1>
+        <iframe
+          width="900"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+          src="//plotly.com/~meertarbani/8.embed"
+        ></iframe>
+      </div>
+      <div className={styles.headings}>
+        <h1>Fraud Data</h1>
+        <iframe
+          width="900"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+          src="//plotly.com/~meertarbani/6.embed"
+        ></iframe>
+      </div>
+      <div className={styles.headings}>
+        <h1>Anger Data</h1>
+        <iframe
+          width="900"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+          src="//plotly.com/~meertarbani/3.embed"
+        ></iframe>
+      </div>
+      <div className={styles.headings}>
+        <h1>Personal Revenge Data</h1>
+        <iframe
+          width="900"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+          src="//plotly.com/~meertarbani/1.embed"
+        ></iframe>
+      </div>
       {docs ? (
         <div className={styles.head}>
-          <h1>Total Most Cases</h1>
+          <h1 style={{ marginTop: "50px" }}>Total Most Cases (Manual input)</h1>
           <Bar
             data={data}
             width={400}

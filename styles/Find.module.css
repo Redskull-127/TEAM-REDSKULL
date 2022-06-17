@@ -9,6 +9,18 @@
     position: absolute;
 }
 
+.headsforopen{
+    margin: 20px;
+    padding: 0px 140px 0px 0px;
+    display: inline-flex;
+}
+
+.headsforcols{
+    display: flex;
+    margin: 20px;
+    white-space: 140px;
+}
+
 .Container{
     padding: 10px;
     width: 100%;

@@ -1,0 +1,367 @@
+{
+    "fields": [
+        {
+            "id": "a",
+            "label": "Sr.No",
+            "type": "string"
+        },
+        {
+            "id": "b",
+            "label": "Crime Head",
+            "type": "string"
+        },
+        {
+            "id": "c",
+            "label": 2014,
+            "type": "string"
+        },
+        {
+            "id": "d",
+            "label": 2015,
+            "type": "string"
+        },
+        {
+            "id": "e",
+            "label": 2016,
+            "type": "string"
+        }
+    ],
+    "data": [
+        [
+            1,
+            "IT - Tampering computer source documents",
+            89,
+            88,
+            78
+        ],
+        [
+            2,
+            "IT - Computer Related Offences (Section 66 and Section 66B to 66E)",
+            5548,
+            6567,
+            6818
+        ],
+        [
+            2.1,
+            "Computer Related Offences-Under Section 66",
+            4192,
+            4154,
+            3321
+        ],
+        [
+            2.2,
+            "Computer Related Offences-Under Section 66B",
+            82,
+            132,
+            196
+        ],
+        [
+            2.3,
+            "Computer Related Offences-Under Section 66C",
+            784,
+            1081,
+            1545
+        ],
+        [
+            2.4,
+            "Computer Related Offences-Under Section 66D",
+            428,
+            1083,
+            1597
+        ],
+        [
+            2.5,
+            "Computer Related Offences-Under Section 66E",
+            62,
+            117,
+            159
+        ],
+        [
+            3,
+            "IT - Cyber Terrorism (Section 66F)",
+            5,
+            13,
+            12
+        ],
+        [
+            4,
+            "IT - Publication/Transmission of Obscene/Sexually Explicit Content (Sec 67 And Sec 67A to 67C)",
+            758,
+            816,
+            957
+        ],
+        [
+            4.1,
+            "Under Section 67 And Section 67A",
+            749,
+            792,
+            930
+        ],
+        [
+            4.2,
+            "Under Section 67B",
+            5,
+            8,
+            17
+        ],
+        [
+            4.3,
+            "Under Section 67C",
+            4,
+            16,
+            10
+        ],
+        [
+            5,
+            "IT - Intentionally not complying with the Order of Controller",
+            3,
+            2,
+            6
+        ],
+        [
+            6,
+            "IT - Failure to Provide or Monitor or Intercept or Decrypt Information",
+            2,
+            0,
+            0
+        ],
+        [
+            7,
+            "IT - Failure to Block Access any Information Hosted etc",
+            1,
+            0,
+            0
+        ],
+        [
+            8,
+            "IT - Not Providing Technical Assistance to Govt. to Enable Online Access",
+            0,
+            3,
+            0
+        ],
+        [
+            9,
+            "IT - Un-authorized Access/Attempt to Access to Protected Computer System",
+            0,
+            8,
+            0
+        ],
+        [
+            10,
+            "IT - Misrepresentation/Suppression of Fact for Obtaining License etc",
+            5,
+            4,
+            2
+        ],
+        [
+            11,
+            "IT - Breach of Confidentiality/Privacy",
+            16,
+            20,
+            20
+        ],
+        [
+            12,
+            "IT - Disclosure of Information in Breach of Lawful Contract",
+            2,
+            4,
+            15
+        ],
+        [
+            13,
+            "IT - Publishing /Making Available False Elect. Signature Certificate",
+            0,
+            3,
+            0
+        ],
+        [
+            14,
+            "IT - Create/Publish/Make Available Elec. Signature Certificate for Unlawful Purpose",
+            3,
+            3,
+            1
+        ],
+        [
+            15,
+            "IT - Others",
+            769,
+            514,
+            704
+        ],
+        [
+            "Total Offences under IT Act (A)",
+            "Total Offences under IT Act (A)",
+            7201,
+            8045,
+            8613
+        ],
+        [
+            1,
+            "IPC - Offences by Public Servant",
+            0,
+            0,
+            0
+        ],
+        [
+            2,
+            "IPC - Fabrication/Destruction of Electronic Records for Evidence",
+            1,
+            4,
+            6
+        ],
+        [
+            3,
+            "IPC - Cheating",
+            1115,
+            2255,
+            2329
+        ],
+        [
+            4,
+            "IPC - Forgery",
+            63,
+            45,
+            81
+        ],
+        [
+            5,
+            "IPC - Data Theft",
+            55,
+            84,
+            86
+        ],
+        [
+            6,
+            "IPC - Criminal Breach of Trust/Fraud",
+            54,
+            42,
+            56
+        ],
+        [
+            6.1,
+            "IPC - Credit/Debit Card",
+            10,
+            18,
+            26
+        ],
+        [
+            6.2,
+            "IPC - Others",
+            44,
+            24,
+            30
+        ],
+        [
+            7,
+            "IPC - Counterfeiting",
+            10,
+            12,
+            10
+        ],
+        [
+            7.1,
+            "IPC - Currency",
+            10,
+            12,
+            10
+        ],
+        [
+            7.2,
+            "IPC - Stamps",
+            0,
+            0,
+            0
+        ],
+        [
+            8,
+            "IPC - Others",
+            974,
+            980,
+            950
+        ],
+        [
+            "Total Offences under IPC (B)",
+            "Total Offences under IPC (B)",
+            2272,
+            3422,
+            3518
+        ],
+        [
+            1,
+            "Copyright Act, 1957",
+            118,
+            113,
+            181
+        ],
+        [
+            1.1,
+            "Under Section 63",
+            74,
+            55,
+            129
+        ],
+        [
+            1.2,
+            "Under Section 68A",
+            4,
+            18,
+            16
+        ],
+        [
+            1.3,
+            "Others",
+            40,
+            40,
+            36
+        ],
+        [
+            2,
+            "Trade Marks Act, 1999",
+            1,
+            0,
+            2
+        ],
+        [
+            2.1,
+            "Under Section 102",
+            0,
+            0,
+            1
+        ],
+        [
+            2.2,
+            "Under Section 103",
+            1,
+            0,
+            0
+        ],
+        [
+            2.3,
+            "Under Section 104",
+            0,
+            0,
+            0
+        ],
+        [
+            2.4,
+            "Others",
+            0,
+            0,
+            1
+        ],
+        [
+            3,
+            "Other SLL Offences",
+            30,
+            12,
+            3
+        ],
+        [
+            "Total Special & Local Laws (SLL) Offences (C )",
+            "Total Special & Local Laws (SLL) Offences (C )",
+            149,
+            125,
+            186
+        ]
+    ]
+}
