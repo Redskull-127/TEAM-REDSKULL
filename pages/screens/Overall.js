@@ -112,7 +112,7 @@ export default function Overall() {
         <iframe
           width="900"
           height="500"
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
           src="//plotly.com/~meertarbani/10.embed"
         ></iframe>
@@ -122,7 +122,7 @@ export default function Overall() {
         <iframe
           width="900"
           height="500"
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
           src="//plotly.com/~meertarbani/8.embed"
         ></iframe>
@@ -132,7 +132,7 @@ export default function Overall() {
         <iframe
           width="900"
           height="500"
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
           src="//plotly.com/~meertarbani/6.embed"
         ></iframe>
@@ -142,7 +142,7 @@ export default function Overall() {
         <iframe
           width="900"
           height="500"
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
           src="//plotly.com/~meertarbani/3.embed"
         ></iframe>
@@ -152,7 +152,7 @@ export default function Overall() {
         <iframe
           width="900"
           height="500"
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
           src="//plotly.com/~meertarbani/1.embed"
         ></iframe>
