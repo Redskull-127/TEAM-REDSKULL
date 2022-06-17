@@ -1,11 +1,12 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Script from "next/script";
 import { initializeApp } from "firebase/app";
 
 export default function Home() {
+
+
   initializeApp({
     apiKey: "AIzaSyCh8nd7w9QbWD9z-BL5-Z3-kV_HoNgR--E",
     authDomain: "team-redskull.firebaseapp.com",
