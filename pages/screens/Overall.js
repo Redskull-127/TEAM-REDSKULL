@@ -119,11 +119,11 @@ export default function Overall() {
         />
       </Head>
       <div id="google_translate_element" style={{position: 'absolute', zIndex: '111'}}> </div>
-      <div class="alert alert-success alert-dismissible fade show" style={{textAlign: 'center'}} role="alert">
+      <div className="alert alert-success alert-dismissible fade show" style={{textAlign: 'center'}} role="alert">
         <strong>NOTE! </strong> All Data has been taken from <Link href='https://kaggle.com'>Kaggle Datasets</Link>.
         <button
           type="button"
-          class="btn-close"
+          className="btn-close"
           data-bs-dismiss="alert"
           aria-label="Close"
         ></button>
@@ -199,7 +199,7 @@ export default function Overall() {
         <iframe
           width="900"
           height="500"
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
           src="//plotly.com/~meertarbani/16.embed"
         ></iframe>
@@ -209,7 +209,7 @@ export default function Overall() {
         <iframe
           width="900"
           height="500"
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
           src="//plotly.com/~meertarbani/14.embed"
         ></iframe>
