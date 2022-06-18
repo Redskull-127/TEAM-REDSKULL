@@ -60,7 +60,7 @@ export default function Headers() {
       <>
         <div className={styles.info} id="info">
           <i
-            class="bi bi-x-lg"
+            className="bi bi-x-lg"
             onClick={(e) => {
               const cls = document.getElementById("info");
               cls.style.display = "none";
