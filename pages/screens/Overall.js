@@ -15,6 +15,7 @@ import Head from "next/head";
 import Script from "next/script";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 
 export default function Overall() {
@@ -67,12 +68,28 @@ export default function Overall() {
   };
 
   useEffect(() => {
+    var addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
     Aos.init({ duration: 2000 });
     setTimeout(() => {
       unsubscribe();
     }, 2000);
   }, []);
+  const googleTranslateElementInit = () => {
 
+    new window.google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages : "en,hi", // include this for selected languages
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element');
+
+}
   return (
     <>
       <Script
@@ -101,6 +118,16 @@ export default function Overall() {
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
         />
       </Head>
+      <div id="google_translate_element" style={{position: 'absolute', zIndex: '111'}}> </div>
+      <div class="alert alert-success alert-dismissible fade show" style={{textAlign: 'center'}} role="alert">
+        <strong>NOTE! </strong> All Data has been taken from <Link href='https://kaggle.com'>Kaggle Datasets</Link>.
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
       <h1
         className={`bi bi-arrow-left ${styles.bi}`}
         onClick={(e) => {
@@ -109,7 +136,13 @@ export default function Overall() {
       ></h1>
       <div className={styles.headings}>
         <h1>Overall Crime-Rate</h1>
-        <iframe width="900" height="500" frameBorder="0" scrolling="no" src="//plotly.com/~meertarbani/12.embed"></iframe>
+        <iframe
+          width="900"
+          height="500"
+          frameBorder="0"
+          scrolling="no"
+          src="//plotly.com/~meertarbani/12.embed"
+        ></iframe>
       </div>
       <div data-aos="fade-up" className={styles.headings}>
         <h1>Political Motives</h1>
@@ -159,6 +192,26 @@ export default function Overall() {
           frameBorder="0"
           scrolling="no"
           src="//plotly.com/~meertarbani/1.embed"
+        ></iframe>
+      </div>
+      <div data-aos="fade-up" className={styles.headings}>
+        <h1>Total Rape Cases</h1>
+        <iframe
+          width="900"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+          src="//plotly.com/~meertarbani/16.embed"
+        ></iframe>
+      </div>
+      <div data-aos="fade-up" className={styles.headings}>
+        <h1>Police Personal Arrested</h1>
+        <iframe
+          width="900"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+          src="//plotly.com/~meertarbani/14.embed"
         ></iframe>
       </div>
       {docs ? (

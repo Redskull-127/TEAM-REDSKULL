@@ -20,11 +20,28 @@ export default function HomeScreen() {
       });
   }
   useEffect(() => {
+    var addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
     load();
     setTimeout(() => {
       details();
     }, 2000);
   }, []);
+  const googleTranslateElementInit = () => {
+
+    new window.google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages : "en,hi", // include this for selected languages
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element');
+
+}
   return (
     <>
       <Head>
@@ -34,6 +51,7 @@ export default function HomeScreen() {
       </Head>
       {loading ? (
         <>
+          <div id="google_translate_element" style={{position: 'absolute'}}> </div>
           <img className={styles.vector} src='/Vector/Vector.png'/>
           <img className={styles.vector2} src='/Vector/Vectorinverted.png'/>
           <div className={styles.NavBar}>

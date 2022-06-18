@@ -14,8 +14,6 @@ export default function Headers() {
   const [ispassword, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [isLogedIn, setIsLoggedIn] = useState(false);
-  
-  
 
   if (isLogedIn) {
     window.open("/screens/HomeScreen", "_self");
@@ -43,13 +41,43 @@ export default function Headers() {
   }
   if (error) {
     return (
-      <div>
-        <h1>{error}</h1>
-      </div>
+      <center>
+        <div style={{ marginTop: "50px" }}>
+          <h1>{error}</h1>
+          <button
+            className="btn btn-success"
+            onClick={(e) => {
+              setError(false);
+            }}
+          >
+            Back To Home
+          </button>
+        </div>
+      </center>
     );
   } else {
     return (
       <>
+        <div className={styles.info} id="info">
+          <i
+            class="bi bi-x-lg"
+            onClick={(e) => {
+              const cls = document.getElementById("info");
+              cls.style.display = "none";
+            }}
+          ></i>
+          <div className={styles.infotext}>
+            <h1>Click this option at top left to translate into hindi!</h1>
+            <h1 translate="no">
+              हिंदी में अनुवाद करने के लिए ऊपर बाईं ओर इस विकल्प पर क्लिक करें!
+            </h1>
+          </div>
+          <img src="/Assets/info.png" />
+          <div className={styles.infotip}>
+            <p>You will get this option on each page!</p>
+            <p translate="no">यह विकल्प आपको हर पेज पर मिलेगा!</p>
+          </div>
+        </div>
         <div className={styles.HeaderTop}>
           <img src="https://i.ibb.co/xCXrwbW/CY-Bock.png" />
           <div
@@ -63,8 +91,8 @@ export default function Headers() {
         </div>
         {isOpen ? (
           <center>
-            <img className={styles.vector} src='/Vector/Vector.png'/>
-            <img className={styles.vector2} src='/Vector/Vectorinverted.png'/>
+            <img className={styles.vector} src="/Vector/Vector.png" />
+            <img className={styles.vector2} src="/Vector/Vectorinverted.png" />
             <div className={styles.logindiv} id="logindiv">
               <div className={styles.upper}>
                 <i
@@ -140,10 +168,15 @@ export default function Headers() {
               scale={1}
             >
               <div className="handle">
-                <img src="/Assets/computer.png" title="security is key for privacy"/>
+                <img
+                  src="/Assets/computer.png"
+                  title="security is key for privacy"
+                />
               </div>
             </Draggable>
-            <p id="infop" style={{marginTop: '50px'}}>Upper image is dragable</p>
+            <p id="infop" style={{ marginTop: "50px" }}>
+              Upper image is dragable
+            </p>
           </div>
         )}
       </>

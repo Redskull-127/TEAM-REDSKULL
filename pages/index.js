@@ -15,6 +15,7 @@ export default function Home() {
     measurementId: "G-C4T38F9X70",
   });
   useEffect(() => {
+    
     var addScript = document.createElement("script");
     addScript.setAttribute(
       "src",

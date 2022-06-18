@@ -40,7 +40,25 @@ export default function CreateScreen() {
     }
     setSuccess(true);
   }
+  useEffect(() => {
+    var addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
+  }, []);
+  const googleTranslateElementInit = () => {
 
+    new window.google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages : "en,hi", // include this for selected languages
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element');
+
+}
   return (
     <>
     {success ? <div className="alert alert-success">Successfully added</div> : null}
@@ -71,6 +89,7 @@ export default function CreateScreen() {
         />
       </Head>
       <center>
+      <div id="google_translate_element" style={{position: 'absolute'}}> </div>
         <div className={styles.header}>
           <h1
             className="bi bi-arrow-left"

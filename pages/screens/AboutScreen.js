@@ -2,8 +2,28 @@ import styles from "../../styles/AboutScreen.module.css";
 import Head from "next/head";
 import Script from "next/script";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function AboutScreen() {
+  useEffect(() => {
+    var addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
+  }, []);
+  const googleTranslateElementInit = () => {
+
+    new window.google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages : "en,hi", // include this for selected languages
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element');
+
+}
   return (
     <>
       <Script
@@ -32,6 +52,7 @@ export default function AboutScreen() {
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
         />
       </Head>
+      <div id="google_translate_element" style={{position: 'absolute'}}> </div>
       <h1
             className={`bi bi-arrow-left ${styles.bi}`}
             onClick={(e) => {

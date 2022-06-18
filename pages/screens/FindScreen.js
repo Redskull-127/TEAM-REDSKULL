@@ -27,10 +27,27 @@ export default function FindScreen() {
   });
 
   useEffect(() => {
+    var addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
     setTimeout(() => {
       unsubscribe();
     }, 2000);
   }, []);
+  const googleTranslateElementInit = () => {
+
+    new window.google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages : "en,hi", // include this for selected languages
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element');
+
+}
   return (
     <>
       <Script
@@ -59,6 +76,7 @@ export default function FindScreen() {
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
         />
       </Head>
+      <div id="google_translate_element" style={{position: 'absolute'}}> </div>
       <h1
         className={`bi bi-arrow-left ${styles.bi}`}
         onClick={(e) => {
