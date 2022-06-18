@@ -13,6 +13,9 @@ export default function HomeScreen() {
     if (auth.currentUser) {
       username.innerText = auth.currentUser.email;
     }
+    if(!auth.currentUser){
+      username.innerText = "Guest";
+    }
   }
   function load() {
     window.addEventListener("DOMContentLoaded", (e) => {
@@ -66,7 +69,7 @@ export default function HomeScreen() {
               <a
                 id="username"
                 onClick={(e) => {
-                  auth.signOut;
+                  auth.signOut();
                   window.open("/", "_self");
                 }}
                 title="Logout"

@@ -9,11 +9,25 @@ import Draggable, { DraggableCore } from "react-draggable";
 import { useRouter } from "next/router";
 
 export default function Headers() {
+  const [isAndroid, setIsAndroid] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isemail, setEmail] = useState("");
   const [ispassword, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [isLogedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    alert("For hackmanthan your are welcome, please login without credintials");
+    if (navigator.userAgent.indexOf("Android") > -1) {
+      setIsAndroid(true);
+    }
+  }, []);
+
+  if (isAndroid) {
+    alert(
+      "You may not be able to use the app on this device as its not properly optimized for this device. Although give a try!"
+    );
+  }
 
   if (isLogedIn) {
     window.open("/screens/HomeScreen", "_self");
@@ -144,6 +158,12 @@ export default function Headers() {
                   }}
                 >
                   <a>Login</a>
+                </div>
+                <div
+                  className={styles.divlogin} style={{marginTop: "20px"}}>
+                    <Link href="screens/HomeScreen">
+                  <a>Login without credintials</a>
+                  </Link>
                 </div>
               </div>
             </div>
