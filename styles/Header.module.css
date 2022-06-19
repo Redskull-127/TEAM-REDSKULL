@@ -136,7 +136,7 @@
   background-color: #75a4ff;
   z-index: 111;
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 14px;
@@ -161,6 +161,31 @@
 
 .info .infotip{
   text-align: center;
+}
+
+.content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 70px;
+}
+
+.content .heading{
+  margin-bottom: 70px;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.content .points{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.content .points p{
+  margin-bottom: 80px;
 }
 
 @media only screen and (max-width: 768px) {

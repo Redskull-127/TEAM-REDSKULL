@@ -7,6 +7,8 @@ import HomeScreen from "../pages/screens/HomeScreen";
 import Link from "next/link";
 import Draggable, { DraggableCore } from "react-draggable";
 import { useRouter } from "next/router";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Headers() {
   const [isAndroid, setIsAndroid] = useState(false);
@@ -15,14 +17,20 @@ export default function Headers() {
   const [ispassword, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [isLogedIn, setIsLoggedIn] = useState(false);
+  const [isScroll, setIsScroll] = useState(true);
 
+  function tip() {
+    alert("For hackmanthan you`re welcome, please login without credintials");
+  }
   useEffect(() => {
-    alert("For hackmanthan your are welcome, please login without credintials");
+    Aos.init({ duration: 2000 });
+    tip();
     if (navigator.userAgent.indexOf("Android") > -1) {
       setIsAndroid(true);
     }
   }, []);
 
+ 
   if (isAndroid) {
     alert(
       "You may not be able to use the app on this device as its not properly optimized for this device. Although give a try!"
@@ -159,10 +167,9 @@ export default function Headers() {
                 >
                   <a>Login</a>
                 </div>
-                <div
-                  className={styles.divlogin} style={{marginTop: "20px"}}>
-                    <Link href="screens/HomeScreen">
-                  <a>Login without credintials</a>
+                <div className={styles.divlogin} style={{ marginTop: "20px" }}>
+                  <Link href="screens/HomeScreen">
+                    <a>Login without credintials</a>
                   </Link>
                 </div>
               </div>
@@ -194,9 +201,54 @@ export default function Headers() {
                 />
               </div>
             </Draggable>
-            <p id="infop" style={{ marginTop: "50px" }}>
+            <p id="infop" style={{ marginTop: "30px" }}>
               Upper image is dragable
             </p>
+            <h3 id='scroll'>Scroll Down</h3>
+            <div className={styles.content}>
+              <div className={styles.points} data-aos="fade-up">
+                <h1 className={styles.heading}>INTRODUCTION</h1>
+                <p data-aos="fade-left">
+                  As the crime are increasing in the today`s world, where it is
+                  a cyber crime or physical crime it is important to manage the
+                  information of such criminal activities in a proper way so
+                  that police associates can get help from this data to solve
+                  case easily. so by taking this perspective in our mind our
+                  team has created a web application to store and retrive the
+                  data of such criminals.
+                </p>
+                <p data-aos="fade-right">
+                  The main motive of this project is to give the ease of
+                  Technology to the Cops to manage the Data related to Criminals
+                  and Crime. We also focused on the making the process of
+                  finding data related to criminals easier. By asking for
+                  different attributes related to the Criminal and Crime while
+                  creating a new record helps us to make finding the record
+                  easier by using attributes to our need like hair color, birth
+                  mark, tattoo, any special traits and many more to that.
+                </p>
+                <p data-aos="fade-left">
+                  However, the workload quickly became too much for one person,
+                  that`s we have created this platform to manage the data of
+                  criminals and retrieve it when needs arises. And we have also
+                  added glimpse of all over data in the graphical method which
+                  becomes easier for cop`s to know the current crime records.
+                </p>
+                <p data-aos="fade-right">
+                  We have used mainly used technology like ReactJs, Firebase ,
+                  javascript, nodeJs and various Opensource technologies to
+                  build this web application and API`s to fetch real and
+                  accurate data of criminals in india.
+                </p>
+                <p data-aos="fade-left">
+                  Our web application is based on the Track-5 problem statement
+                  which is given in the HACKMANTHAN hackethon. This application
+                  is created with the terms and conditions given by them and
+                  also taking a real world problem in the our mind we have
+                  completed this project.
+                </p>
+              </div>
+            </div>
           </div>
         )}
       </>
